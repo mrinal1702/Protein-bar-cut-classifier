@@ -1,0 +1,23 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors/OS
+.vscode/
+.DS_Store
+
+# Environment files
+.env
+
+# Data: keep small/clean outputs, ignore raw/large
+data/raw/
+*.gz
+*.zip
+# Ignore original raw Excel if you don’t want to push it
+openfoodfacts_export.xlsx
+
+# Models (optional, if large)
+*.joblib
