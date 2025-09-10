@@ -38,10 +38,12 @@ Finally, I introduced a key feature:
 
 ### Interactive Chart — Calories vs Protein Density
 
+Here, I started with only factoring calories in the bar and protein density. I plot all the 309 bars on this interactive chart, to divide them into the 4 quadrants you see below.
+
 [▶️ **Open the interactive Plotly chart**](https://mrinal1702.github.io/Protein-bar-cut-classifier/irish_protein_bars_scatter.html)
 
 <a href="https://mrinal1702.github.io/Protein-bar-cut-classifier/irish_protein_bars_scatter.html">
   <img src="assets/irish_protein_bars_scatter.png" alt="Protein Bars: Calories vs Protein Density (interactive link)" />
 </a>
 
-
+This gives us an idea of which bars are better for cutting, which are better for bulking, which are light on both calories and protein and which are relatively "junk" bars - high on calories and low on protein.
