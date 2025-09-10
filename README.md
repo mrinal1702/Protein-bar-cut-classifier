@@ -36,5 +36,12 @@ Finally, I introduced a key feature:
 
 ---
 
+### Interactive Chart — Calories vs Protein Density
+
+[▶️ **Open the interactive Plotly chart**](https://mrinal1702.github.io/Protein-bar-cut-classifier/irish_protein_bars_scatter.html)
+
+<a href="https://mrinal1702.github.io/Protein-bar-cut-classifier/irish_protein_bars_scatter.html">
+  <img src="assets/irish_protein_bars_scatter.png" alt="Protein Bars: Calories vs Protein Density (interactive link)" />
+</a>
 
 
