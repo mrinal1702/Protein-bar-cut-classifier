@@ -203,6 +203,30 @@ These show both the **importance** and the **direction** of each factor:
 | Sugar                 | -0.64       | More sugar reduces cutting-friendliness. |
 | Saturated fat         | -0.16       | Slight negative effect, but weaker compared to calories or protein. |
 
-**Key takeaway:** Calories are the strongest negative predictor, while protein density is the strongest positive predictor — exactly what you’d expect for fat loss goals.  
+**Key takeaway:** Calories are the strongest negative predictor, while protein density is the strongest positive predictor — exactly what you’d expect for fat loss goals.
+
+---
+
+## From Model to App: Try It Yourself  
+
+Based on the training data of ~310 protein bars available in Ireland, I built a **logistic regression classifier** that predicts whether a protein bar is **cutting-friendly** or not.  
+
+The key idea:  
+- We trained on Irish bars, but the model only looks at **nutrition facts per 100g** (calories, protein, sugar, fiber, saturated fat).  
+- This means the classifier can be applied **worldwide**.  
+- Any new protein bar — even one released tomorrow — can be evaluated instantly by entering its nutrition values.  
+
+---
+
+### 🔗 Try the Classifier Live  
+
+👉 [**Open the Interactive App**](https://protein-bar-cut-classifier-hmkmhku2zzmkm2chkv5bqj.streamlit.app/)  
+
+Enter kcal, protein, sugar, fiber, and saturated fat **per 100g**, and the model will return:  
+- ✅ Cutting-friendly (with probability), or  
+- ❌ Not cutting-friendly  
+
+This makes it easy for **consumers** to check bars themselves, and for **trainers** to guide clients with evidence-backed recommendations.
+
 
 
