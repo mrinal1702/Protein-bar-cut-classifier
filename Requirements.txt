@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 numpy
 pandas
 scikit-learn==1.5.2
@@ -5,3 +6,12 @@ streamlit
 joblib
 plotly
 kaleido
+=======
+numpy==1.26.4
+scipy==1.11.4
+pandas==2.2.2
+scikit-learn==1.5.2
+joblib==1.4.2
+threadpoolctl==3.5.0
+streamlit==1.37.0
+>>>>>>> 9658487 (Pin deps for Streamlit Cloud (ensure joblib installed))
