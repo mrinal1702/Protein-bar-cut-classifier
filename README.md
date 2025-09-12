@@ -1,4 +1,4 @@
-# What Are the Best Protein Bars Available in Ireland?
+# Training an ML Model to Classify Protein Bars as Cutting Friendly or not
 
 This project is designed for **consumers aiming to cut** and **trainers looking to guide their clients** on better nutrition choices.  
 Protein bars are often marketed with flashy claims — “high protein,” “low sugar,” “healthy fuel” — but not all are truly cutting-friendly.  
@@ -228,5 +228,30 @@ Enter kcal, protein, sugar, fiber, and saturated fat **per 100g**, and the model
 
 This makes it easy for **consumers** to check bars themselves, and for **trainers** to guide clients with evidence-backed recommendations.
 
+---
+
+## Conclusion  
+
+The world of protein bars is full of **noise and misleading signals**. Many products are marketed as “healthy” or “high protein” but actually come loaded with excess calories and sugar.  
+
+Through this project, I built a framework to **cut through the clutter**:
+- A **Cutting Score** that balances calories, protein density, fiber, sugar, and saturated fat.  
+- A **classifier model** that learns from the data and generalizes to any new protein bar.  
+- An **interactive app** where anyone can input a bar’s nutrition facts and instantly see whether it’s cutting-friendly.  
+
+---
+
+## Future Scope  
+
+Health is a **complex, multi-dimensional topic**. While this project focused on the most important macronutrient factors, there are many directions it could be extended:
+
+- **Nuanced health factors** → Different people may react differently to sugar alcohols, additives, or protein sources. A more detailed model could incorporate these.  
+- **Larger dataset** → Expanding from Irish bars to a **global dataset** would improve coverage and generalizability.  
+- **Protein quality** → Not all proteins are equal; future versions could account for amino acid profile or digestibility.  
+- **Multi-class classification** → Instead of just a binary *cutting-friendly / not cutting-friendly*, we could introduce multiple tiers (e.g., *excellent*, *moderate*, *poor*) for finer-grained guidance.  
+
+---
+
+✅ With this foundation, the project demonstrates how **data analysis + machine learning** can provide clarity in a cluttered consumer market — and how a model trained on accessible nutrition data can power real-world, interactive tools.
 
 
