@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 import streamlit as st
 from sklearn.pipeline import Pipeline
+import joblib
 
 st.set_page_config(page_title="Protein Bar Cutting Classifier", page_icon="💪", layout="centered")
 st.title("💪 Protein Bar Cutting Classifier")
