@@ -38,7 +38,7 @@ Finally, I introduced a key feature:
 
 ### Interactive Chart — Calories vs Protein Density
 
-Here, I started with only factoring calories in the bar and protein density. I plot all the 309 bars on this interactive chart, to divide them into the 4 quadrants you see below.
+Here, I started with only factoring calories in the bar and protein density. I plot all the 309 bars on this interactive chart, to divide them into the 4 quadrants you see below. You can click on the link and hover over the data points to get the names of the bars.
 
 [▶️ **Open the interactive Plotly chart**](https://mrinal1702.github.io/Protein-bar-cut-classifier/irish_protein_bars_scatter.html)
 
@@ -58,7 +58,7 @@ To find the strongest candidates for **cutting-friendly** and **bulking-oriented
 - For each bar, I calculated its Euclidean distance from that center point.
 - Bars in the **top-left quadrant** (low calories, high protein density) that were furthest from the center appear in the **Top 5 Cutting** list.
 - Bars in the **top-right quadrant** (high calories, high protein density) that were furthest appear in the **Top 5 Bulking** list.
-- Bars in the **bottom-right quadrant** (high calories, low protein) that were furthest appear in the **Bottom 5 Worst** list (not shown here for brevity).
+- Bars in the **bottom-right quadrant** (high calories, low protein) that were furthest appear in the **5 Worst** list (not shown here for brevity).
 
 ---
 
@@ -78,7 +78,7 @@ These are the five bars that combine **very low calories** and **high protein de
 
 ### Top 5 Bulking-Oriented Protein Bars
 
-These bars pack both **high calories** and **high protein density**, making them suitable for users looking to gain or maintain bulk while still getting strong protein value:
+These bars pack both **high calories** and **high protein density**, making them suitable for users looking to gain or maintain bulk while still getting strong protein value: (some links weren't found, so I have put the openfoodfacts link there to reverse search from the barcode for those who want to find the bars)
 
 | Rank | Bar Name | Brand | Link |
 |------|----------|-------|------|
@@ -91,12 +91,13 @@ These bars pack both **high calories** and **high protein density**, making them
 ---
 
 > ℹ Bottom 5 “Worst” bars (high calories, low protein density) are also computed but not shown here. They may indicate bars to avoid when cutting.
-
+Whereas 
 ---
 
 ## Beyond Protein and Calories  
 
-Protein and calories are crucial metrics — but they don’t tell the whole story.  
+Protein and calories are crucial metrics — but they don’t tell the whole story. For example, a bar higher on fiber might help provide more satiety for fewer calories, and this could have an extra effect when people are looking for a snack on their diet. Similarly, a bar higher on sugar might cause cravings and make dieting harder.
+
 To get a more **holistic view of health**, we expanded the analysis to include:  
 
 - **Fiber** → promotes satiety with minimal calories, supports gut health.  
@@ -186,7 +187,7 @@ The model achieved:
 - **F1 score ≈ 0.92** → the model is very good at correctly identifying cutting-friendly bars (balance of precision and recall).  
 - **ROC-AUC ≈ 0.99** → almost perfect ability to rank cutting-friendly bars above non-friendly ones.  
 
-Since the F1 score is high, we can be confident moving forward with this model.  
+Since the F1 score is high, we can be confident moving forward with this model. The model could be improved with more data and more intervals and labels, but for a preliminary analysis, a binary label of cutting friendly vs not cutting friendly should suffice.
 
 ---
 
@@ -203,7 +204,7 @@ These show both the **importance** and the **direction** of each factor:
 | Sugar                 | -0.64       | More sugar reduces cutting-friendliness. |
 | Saturated fat         | -0.16       | Slight negative effect, but weaker compared to calories or protein. |
 
-**Key takeaway:** Calories are the strongest negative predictor, while protein density is the strongest positive predictor — exactly what you’d expect for fat loss goals.
+**Key takeaway:** Calories are the strongest negative predictor, while protein density is the strongest positive predictor — exactly what you’d expect for fat loss goals and similar to the weightages we added in providing the scores.
 
 ---
 
@@ -212,7 +213,7 @@ These show both the **importance** and the **direction** of each factor:
 Based on the training data of ~310 protein bars available in Ireland, I built a **logistic regression classifier** that predicts whether a protein bar is **cutting-friendly** or not.  
 
 The key idea:  
-- We trained on Irish bars, but the model only looks at **nutrition facts per 100g** (calories, protein, sugar, fiber, saturated fat).  
+- We trained on Irish bars (ie bars available in Ireland), but the model only looks at **nutrition facts per 100g** (calories, protein, sugar, fiber, saturated fat).  
 - This means the classifier can be applied **worldwide**.  
 - Any new protein bar — even one released tomorrow — can be evaluated instantly by entering its nutrition values.  
 
